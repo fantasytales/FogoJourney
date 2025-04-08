@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firestarter: Fogo's Journey</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-state="menu">
+  <div id="fadeOverlay"></div>
+  <div id="gameWrapper">
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <div id="ui">
+      <div id="title-screen" class="screen">
+        <h1>🔥 Firestarter: Fogo's Journey</h1>
+        <button onclick="startGame()">Start Game</button>
+      </div>
+
+      <div id="gameover-screen" class="screen">
+        <h2>💀 Game Over</h2>
+        <button onclick="restartGame()">Restart</button>
+      </div>
+
+      <div id="level-screen" class="screen">
+        <h2>🎉 Level Complete!</h2>
+        <button onclick="nextLevel()">Next Level</button>
+      </div>
+
+      <div id="win-screen" class="screen">
+        <h2>🔥 You Win!</h2>
+        <button onclick="restartGame()">Play Again</button>
+        <button onclick="alert('Under Development')">Mint POAP</button>
+      </div>
+
+      <div id="level-label" class="floating-label">Level 1</div>
+      <div id="respawn-text" class="floating-label">Respawning...</div>
+      <div id="controls-guide">← → move &nbsp;&nbsp; ↑ jump</div>
+    </div>
+
+    <button id="muteBtn" onclick="toggleMute()" title="Toggle Mute">🔊</button>
+  </div>
+
+  <div id="infoSection">
+    <h2>🔥 About the Game</h2>
+    <p>
+      <strong>Firestarter: Fogo's Journey</strong> is a platformer where you guide Ember, a tiny flame, through dark platforms to collect magical sparks and evolve into a full FLAME! Avoid enemies and survive all 3 levels to win.
+    </p>
+
+    <h3>🎨 Credits</h3>
+    <ul>
+      <li>Game Design & Code: <a href="https://x.com/elatysatnaf" target="_blank">Fantasytale</a></li>
+      <li>Image Assets: <a href="https://discord.gg/FogoChain" target="_blank">Discord Fogo Server</a></li>
+      <li>Sound Effects: <a href="https://freesound.org/" target="_blank">Freesound.org</a></li>
+    </ul>
+
+    <h3>👥 Connect to Fogo</h3>
+    <ul>
+      <li>Discord: <a href="https://discord.gg/FogoChain" target="_blank">https://discord.gg/FogoChain</a></li>
+      <li>Twitter: <a href="https://x.com/fogochain" target="_blank">https://x.com/fogochain</a></li>
+      <li>Website: <a href="https://www.fogo.io" target="_blank">https://www.fogo.io</a></li>
+    </ul>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop src="assets/bg-music.wav"></audio>
+  <audio id="sfxJump" src="assets/sfx-jump.wav"></audio>
+  <audio id="sfxSpark" src="assets/sfx-spark.wav"></audio>
+  <audio id="sfxFlame" src="assets/sfx-flame.wav"></audio>
+  <audio id="sfxDeath" src="assets/sfx-death.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

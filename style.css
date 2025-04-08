@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+#gameWrapper {
+  width: 800px;
+  height: 400px;
+  position: relative;
+  margin: 60px auto;
+  border: 2px solid #ff6a00;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #1c1c1c;
+}
+
+#ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Screens */
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  z-index: 5;
+  text-align: center;
+  display: none;
+  padding: 40px 20px;
+}
+
+body[data-state="menu"] #title-screen {
+  display: block;
+}
+
+.screen h1, .screen h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.screen button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.screen button:hover {
+  transform: scale(1.1);
+  background: #ffaa33;
+}
+
+#muteBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #222;
+  color: white;
+  border: 2px solid #ff6a00;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#controls-guide {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 9;
+}
+
+.floating-label {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 22px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 10;
+}
+
+#fadeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 100;
+  transition: opacity 1s;
+}
+
+#infoSection {
+  width: 800px;
+  margin: 20px auto 60px;
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border: 1px solid #ff6a00;
+  border-radius: 10px;
+  max-height: none;
+  overflow: visible;
+}
+
+#infoSection h2, #infoSection h3 {
+  color: #ffaa33;
+  margin-bottom: 10px;
+}
+
+#infoSection a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+#infoSection a:hover {
+  text-decoration: underline;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#title-screen {
+  display: block;
+}
