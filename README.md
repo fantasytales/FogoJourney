@@ -27,7 +27,7 @@
 
 ## 🎨 Credits
 
-- **Game Design & Code**: [Fantasytale](https://github.com/Fantasytale)
+- **Game Design & Code**: [Fantasytale](https://github.com/fantasytales)
 - **Image Assets**: Discord Fogo Server
 - **Sound Effects**: [Freesound.org](https://freesound.org)
 
