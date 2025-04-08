@@ -12,7 +12,6 @@
 - ⚠️ Avoid gray smoke enemies
 - 🔥 Reach the final level and **win the game**
 - 🔊 Toggle music & SFX
-- 🎉 Win screen with **Mint POAP** (coming soon)
 
 ---
 
